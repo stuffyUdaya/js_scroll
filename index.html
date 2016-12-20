@@ -24,17 +24,18 @@
 	Coding is <div id="magic"></div>
 
 	<script>
+	var a = String.fromCharCode(160)
 
-		var words = ["fun", "exciting", "about not giving up", "being helpful", "being open", "what I learned at CodingDojo!"],
+		var words = ["fun", "exciting", "about"+a+"not"+a+"giving"+a+"up", "being"+a+"helpful", "being"+a+"open", "what"+a+"I"+a+"learned"+a+"at"+a+"CodingDojo!"],
+
 			el = document.getElementById('magic'),
 			word_counter = 0,
 			character_counter = 0;
-
 		function updateText()
 		{
 			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
 
-			if(character_counter == words[word_counter].length)
+			if(character_counter == words[word_counter].length+1)
 			{
 				word_counter++; 	//choose a different word
 				character_counter = 0;	//start over with the first character of the word
